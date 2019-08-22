@@ -4,7 +4,7 @@ A neo-cli plugin to provide extended information about transaction verification 
 ### Introduction
 There are 20+ reasons a Neo transaction may fail verification, but the Neo RPC server by default only gives generic
 error messages, such as the dreaded `Block or transaction validation failed`, leaving the developer on their own to 
-figure out exactly what is wrong with their transaction syntax. VerboseVerify plugin intercepts `sendrawtransaction`
+figure out exactly what is wrong with their transaction syntax. The VerboseVerify plugin intercepts `sendrawtransaction`
 requests and runs them through the same transaction verification process used by the Neo core, except it provides 
 specific information about the exact failure condition. If the pre-verification step passes, the transaction continues
 to be verified and processed as normal by the core code.
