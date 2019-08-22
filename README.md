@@ -19,3 +19,18 @@ cp ./bin/Release/netstandard2.0/publish/VerboseVerify.dll {neo-cli folder}/Plugi
 
 ### Configuration
 No configuration required.
+
+### Example failure message
+```
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "error": {
+        "code": -500,
+        "message": "Input 0x4fd449222de147a30bd408bf58588f091429aca58624a570e763eae9ddb7baaa:1 is marked as spent",
+        "data": "   at Neo.Plugins.VerboseVerify.CheckDoubleSpend(IPersistence persistence, Transaction tx)
+                    at Neo.Plugins.VerboseVerify.PreVerify(Transaction tx, Snapshot snapshot, IEnumerable 1 mempool)   
+                    at Neo.Network.RPC.RpcServer.ProcessRequest(HttpContext context, JObject request)"
+    }
+}
+```
